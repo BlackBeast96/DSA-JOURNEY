@@ -2,22 +2,23 @@
 using namespace std;
 
 int main(){
-    int size;
-    cin>>size;
+    int key,size,res=0;
+    int arr[size]={1,2,3,4,5,6};
     bool flag=false;
-    int arr[size]={1,2,3,4,2};
+    cin>>size;
+    cin>>key;
     for(int i=0;i<size;i++){
-        for(int j=i+1;j<size;j++){
-            if(arr[i]==arr[j]){
+        for(int j=1;j<size;j++){
+            res=arr[i]+arr[j];
+            if(res==key){
+                cout<<"found";
                 flag=true;
-                cout<<j;
                 break;
             }
         }
+        res=0;
         if(flag){
             break;
         }
     }
-    
-
 }
