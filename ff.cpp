@@ -4,24 +4,20 @@ using namespace std;
 int main(){
     int size;
     cin>>size;
-    int arr[size]={1,2,3};
-    int res;
-    int key;
-    cin>>key;
     bool flag=false;
+    int arr[size]={1,2,3,4,2};
     for(int i=0;i<size;i++){
-        for(int j=0;j<size;j++){
-            res=arr[i]+arr[j];
-            if(res==key){
-                cout<<"found";
+        for(int j=i+1;j<size;j++){
+            if(arr[i]==arr[j]){
                 flag=true;
+                cout<<j;
                 break;
             }
         }
-        res=0;
         if(flag){
             break;
         }
     }
+    
 
 }
