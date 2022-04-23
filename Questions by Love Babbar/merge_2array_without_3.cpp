@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int arr[3]={1,4,2};
+    int arr[3]={1,3,2};
     int arr2[3]={5,4,6};
     for(int i=0;i<3;i++){
         if(arr[i]<arr2[i]){
